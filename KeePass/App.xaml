@@ -9,7 +9,12 @@
     <Application.Resources>
         <system:String x:Key="AppName">7PASS</system:String>
         <i18n:UiStrings xmlns:i18n="clr-namespace:KeePass.I18n" x:Key="UiStrings" />
-        
+
+        <Style x:Key="PageHeader" TargetType="TextBlock" BasedOn="{StaticResource PhoneTextNormalStyle}">
+            <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilySemiBold}" />
+            <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMedium}" />
+        </Style>
+
         <Style x:Key="KeePassPage" TargetType="controls:PhoneApplicationPage">
             <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilyNormal}" />
             <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeNormal}" />

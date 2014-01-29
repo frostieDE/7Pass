@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using Coding4Fun.Phone.Controls;
+using Coding4Fun.Toolkit.Controls;
 using Microsoft.Phone.Tasks;
 
 namespace KeePass.Utils

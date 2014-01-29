@@ -4,7 +4,7 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
-using Coding4Fun.Phone.Controls;
+using Coding4Fun.Toolkit.Controls;
 using KeePass.Analytics;
 using KeePass.Controls;
 using KeePass.Data;

@@ -7,8 +7,8 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:uc="clr-namespace:KeePass.Controls"
-    xmlns:c4f="clr-namespace:Coding4Fun.Phone.Controls;assembly=Coding4Fun.Phone.Controls"
-    xmlns:c4fb="clr-namespace:Coding4Fun.Phone.Controls.Binding;assembly=Coding4Fun.Phone.Controls"
+    xmlns:c4f="clr-namespace:Coding4Fun.Toolkit.Controls;assembly=Coding4Fun.Toolkit.Controls"
+    xmlns:c4fb="clr-namespace:Coding4Fun.Toolkit.Controls.Binding;assembly=Coding4Fun.Toolkit.Controls"
     Style="{StaticResource KeePassPage}">
 
 	<Grid x:Name="LayoutRoot" Background="Transparent">
@@ -19,7 +19,7 @@
 
 		<StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
 			<TextBlock x:Name="ApplicationTitle" Text="{StaticResource AppName}"
-			           Style="{StaticResource PhoneTextNormalStyle}"/>
+			           Style="{StaticResource PageHeader}"/>
 			<TextBlock x:Name="PageTitle" Text="{Binding Path=Strings.EntryFields_PageTitle, Source={StaticResource UiStrings}}" Margin="9,-7,0,0"
 			           Style="{StaticResource PhoneTextTitle1Style}"/>
 		</StackPanel>

@@ -15,13 +15,13 @@
 
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle" Text="{StaticResource AppName}"
-                       Style="{StaticResource PhoneTextNormalStyle}"/>
+                       Style="{StaticResource PageHeader}"/>
             <TextBlock x:Name="PageTitle" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"
                        Text="{Binding Path=Strings.Rename_PageTitle, Source={StaticResource UiStrings}}" />
         </StackPanel>
 
         <StackPanel Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Name="lblRename" Style="{StaticResource PhoneTextNormalStyle}"
+            <TextBlock Name="lblRename" Style="{StaticResource PhoneTextSubtleStyle}"
                        Text="{Binding Path=Strings.Rename_Prompt, Source={StaticResource UiStrings}}" />
             
             <TextBox Name="txtName" MaxLength="25"

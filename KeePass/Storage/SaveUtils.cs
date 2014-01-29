@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Controls;
-using Coding4Fun.Phone.Controls;
+using Coding4Fun.Toolkit.Controls;
 
 namespace KeePass.Storage
 {

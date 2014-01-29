@@ -15,16 +15,18 @@
 
 		<StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
 			<TextBlock x:Name="ApplicationTitle" Text="{StaticResource AppName}"
-				Style="{StaticResource PhoneTextNormalStyle}"/>
+				Style="{StaticResource PageHeader}"/>
             <TextBlock x:Name="PageTitle" Style="{StaticResource PhoneTextTitle1Style}" Margin="9,-7,0,0"
                        Text="{Binding Path=Strings.AnalyticsSettings_PageTitle, Source={StaticResource UiStrings}}" />
 		</StackPanel>
 
 		<ScrollViewer Grid.Row="1" Margin="12,0,12,0">
-			<StackPanel Grid.Row="1" Margin="12,0,12,0">
+			<StackPanel Grid.Row="1">
                 <TextBlock TextWrapping="Wrap"
-                           Text="{Binding Path=Strings.AnalyticsSettings_Policy, Source={StaticResource UiStrings}}" />
-                <TextBlock Name="lblDevice" />
+                           Text="{Binding Path=Strings.AnalyticsSettings_Policy, Source={StaticResource UiStrings}}"
+                           Style="{StaticResource PhoneTextNormalStyle}"/>
+                <TextBlock Name="lblDevice"
+                           Style="{StaticResource PhoneTextNormalStyle}"/>
 			</StackPanel>
 		</ScrollViewer>
 	</Grid>

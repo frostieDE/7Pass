@@ -7,7 +7,7 @@
 	xmlns:keepass="clr-namespace:KeePass.Utils"
 	xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
 	xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
-	xmlns:c4f="clr-namespace:Coding4Fun.Phone.Controls.Converters;assembly=Coding4Fun.Phone.Controls"
+	xmlns:c4f="clr-namespace:Coding4Fun.Toolkit.Controls.Converters;assembly=Coding4Fun.Toolkit.Controls"
     xmlns:uc="clr-namespace:KeePass.Controls"
 	Style="{StaticResource KeePassPage}">
 
@@ -17,17 +17,8 @@
     </phone:PhoneApplicationPage.Resources>
 
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <TextBlock x:Name="ApplicationTitle" Grid.Row="0"
-			Text="{StaticResource AppName}"
-			Style="{StaticResource PhoneTextNormalStyle}"/>
-
-        <controls:Pivot Grid.Row="1" Margin="12,0,12,0">
-            <controls:PivotItem Name="pivotGroup">
+        <phone:Pivot Title="{StaticResource AppName}">
+            <phone:PivotItem Name="pivotGroup">
                 <uc:KeePassListBase x:Name="lstGroup" Navigation="lstGroup_Navigation"
                                     toolkit:TiltEffect.IsTiltEnabled="True">
                     <uc:KeePassListBase.ItemTemplate>
@@ -49,12 +40,12 @@
                         </DataTemplate>
                     </uc:KeePassListBase.ItemTemplate>
                 </uc:KeePassListBase>
-            </controls:PivotItem>
+            </phone:PivotItem>
 
-            <controls:PivotItem Header="{Binding Path=Strings.GroupDetails_History, Source={StaticResource UiStrings}}">
+            <phone:PivotItem Header="{Binding Path=Strings.GroupDetails_History, Source={StaticResource UiStrings}}">
                 <uc:KeePassList SelectionChanged="lstHistory_SelectionChanged" x:Name="lstHistory" />
-            </controls:PivotItem>
-        </controls:Pivot>
+            </phone:PivotItem>
+        </phone:Pivot>
     </Grid>
 
     <phone:PhoneApplicationPage.ApplicationBar>

@@ -11,9 +11,9 @@
 	Style="{StaticResource KeePassPage}"
     SupportedOrientations="Portrait">
 
-    <controls:Panorama Name="panMain" Title="{Binding Path=Strings.PassGen_PageTitle, Source={StaticResource UiStrings}}"
-                       SelectionChanged="panMain_SelectionChanged">
-        <controls:PanoramaItem Name="panSettings"
+    <phone:Panorama Name="panMain" Title="{Binding Path=Strings.PassGen_PageTitle, Source={StaticResource UiStrings}}"
+                    SelectionChanged="panMain_SelectionChanged">      
+        <phone:PanoramaItem Name="panSettings"
                                Header="{Binding Path=Strings.PassGen_Settings, Source={StaticResource UiStrings}}">
             <ScrollViewer>
                 <Grid>
@@ -31,14 +31,15 @@
                                 ValueChanged="sldLength_ValueChanged" />
                         <TextBlock Name="lblLength"
                                    HorizontalAlignment="Left"
-                                   VerticalAlignment="Bottom" />
+                                   VerticalAlignment="Bottom"
+                                   Style="{StaticResource PhoneTextNormalStyle}"/>
                     </Grid>
 
                     <toolkit:WrapPanel Name="pnlSets" Grid.Row="2" />
                 </Grid>
             </ScrollViewer>
-        </controls:PanoramaItem>
-        <controls:PanoramaItem Name="panResults"
+        </phone:PanoramaItem>
+        <phone:PanoramaItem Name="panResults"
                                Header="{Binding Path=Strings.PassGen_Results, Source={StaticResource UiStrings}}">
             <ListBox Name="lstResults" SelectionChanged="lstResults_SelectionChanged">
                 <ListBox.ItemTemplate>
@@ -56,8 +57,8 @@
                     </Style>
                 </ListBox.ItemContainerStyle>
             </ListBox>
-        </controls:PanoramaItem>
-    </controls:Panorama>
+        </phone:PanoramaItem>
+    </phone:Panorama>
 
 	<phone:PhoneApplicationPage.ApplicationBar>
 		<shell:ApplicationBar IsVisible="True">

@@ -14,29 +14,26 @@
 
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle" Text="{StaticResource AppName}"
-                       Style="{StaticResource PhoneTextNormalStyle}"/>
+                       Style="{StaticResource PageHeader}"/>
             <TextBlock x:Name="PageTitle" Style="{StaticResource PhoneTextTitle1Style}" Margin="9,-7,0,0"
                        Text="{Binding Path=Strings.Settings_PageTitle, Source={StaticResource UiStrings}}" />
         </StackPanel>
 
-        <ScrollViewer Grid.Row="1">
-            <StackPanel>
-                <toolkit:ToggleSwitch
+        <StackPanel Grid.Row="1"
+                    Margin="12,0">
+            <toolkit:ToggleSwitch
                     Name="chkRecycleBin" Checked="chkRecycleBin_CheckedChanged" Unchecked="chkRecycleBin_CheckedChanged"
                     Header="{Binding Path=Strings.Settings_HideRecycleBin, Source={StaticResource UiStrings}}" />
-                <toolkit:ToggleSwitch
+            <toolkit:ToggleSwitch
                     Name="chkBrowser" Checked="chkBrowser_CheckedChanged" Unchecked="chkBrowser_CheckedChanged"
                     Header="{Binding Path=Strings.Settings_IntegratedBrwoser, Source={StaticResource UiStrings}}" />
-                <toolkit:ToggleSwitch
+            <toolkit:ToggleSwitch
                     Name="chkPassword" Loaded="chkPassword_Loaded"
                     Header="{Binding Path=Strings.Settings_GlobalPass, Source={StaticResource UiStrings}}" />
 
-                <TextBlock Text=" " />
-                <HyperlinkButton Content="{Binding Path=Strings.Settings_Analytics, Source={StaticResource UiStrings}}"
+            <TextBlock Text=" " />
+            <HyperlinkButton Content="{Binding Path=Strings.Settings_Analytics, Source={StaticResource UiStrings}}"
                                  Click="lnkAnalytics_Click" />
-            </StackPanel>
-        </ScrollViewer>
-
-        
+        </StackPanel>
     </Grid>
 </keepass:KeePassPage>
